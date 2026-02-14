@@ -88,7 +88,7 @@ const HostelDetailsPage = () => {
                   <span className="text-2xl font-bold text-primary">{formatPrice(hostel.price)}</span>
                   <span className="text-muted-foreground text-sm">/year</span>
                   <div className="flex items-center gap-1 mt-1">
-                    <Star className="h-4 w-4 fill-futa-gold text-futa-gold" />
+                    <Star className="h-4 w-4 fill-cn-gold text-cn-gold" />
                     <span className="font-semibold text-foreground">{hostel.rating}</span>
                     <span className="text-muted-foreground text-sm">({hostel.reviewCount} reviews)</span>
                   </div>
@@ -126,7 +126,7 @@ const HostelDetailsPage = () => {
                           <span className="font-semibold text-foreground">{r.author}</span>
                           <div className="flex items-center gap-1">
                             {Array.from({ length: 5 }).map((_, i) => (
-                              <Star key={i} className={`h-3.5 w-3.5 ${i < r.rating ? "fill-futa-gold text-futa-gold" : "text-muted"}`} />
+                              <Star key={i} className={`h-3.5 w-3.5 ${i < r.rating ? "fill-cn-gold text-cn-gold" : "text-muted"}`} />
                             ))}
                           </div>
                         </div>

@@ -38,9 +38,9 @@ const AdminDashboard = () => {
 
   const stats = [
     { label: "Total Listings", value: adminStats.totalListings, icon: LayoutDashboard, color: "text-primary" },
-    { label: "Pending Approvals", value: pendingHostels.length, icon: Clock, color: "text-futa-warning" },
+    { label: "Pending Approvals", value: pendingHostels.length, icon: Clock, color: "text-cn-warning" },
     { label: "Total Users", value: adminStats.totalUsers, icon: Users, color: "text-accent" },
-    { label: "New Today", value: adminStats.newToday, icon: CheckCircle, color: "text-futa-success" },
+    { label: "New Today", value: adminStats.newToday, icon: CheckCircle, color: "text-cn-success" },
   ];
 
   const HostelTable = ({ data, showActions }: { data: typeof hostels; showActions?: boolean }) => (
@@ -72,7 +72,7 @@ const AdminDashboard = () => {
                 </Link>
                 {showActions && h.status === "pending" && (
                   <>
-                    <Button size="sm" variant="ghost" className="text-futa-success" onClick={() => handleApprove(h.id)}><Check className="h-4 w-4" /></Button>
+                    <Button size="sm" variant="ghost" className="text-cn-success" onClick={() => handleApprove(h.id)}><Check className="h-4 w-4" /></Button>
                     <Button size="sm" variant="ghost" className="text-destructive" onClick={() => handleReject(h.id)}><X className="h-4 w-4" /></Button>
                   </>
                 )}
