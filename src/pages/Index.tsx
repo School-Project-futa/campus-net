@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Search, MapPin, Banknote, Home, Star, ChevronRight, ArrowRight, Users, Eye, Phone, Quote } from "lucide-react";
+import { Search, MapPin, Home, Star, ChevronRight, ArrowRight, Eye, Phone, Quote, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Navbar from "@/components/Navbar";
@@ -29,24 +28,36 @@ const HomePage = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative bg-primary overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--futa-teal)/0.3),transparent_60%)]" />
-        <div className="container relative py-20 md:py-28">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1920&h=1080&fit=crop"
+            alt="Student accommodation"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/50" />
+        </div>
+        <div className="container relative py-24 md:py-36">
           <div className="max-w-2xl">
-            <h1 className="text-3xl md:text-5xl font-bold text-primary-foreground leading-tight">
-              Find Affordable Off-Campus Accommodation Near{" "}
-              <span className="text-futa-gold">FUTA</span>
+            <div className="inline-flex items-center gap-2 bg-accent/20 text-accent rounded-full px-4 py-1.5 text-sm font-medium mb-6 backdrop-blur-sm border border-accent/30">
+              <CheckCircle className="h-4 w-4" />
+              Trusted by 500+ FUTA students
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground leading-tight tracking-tight">
+              Your Perfect{" "}
+              <span className="text-accent">Student Home</span>{" "}
+              Awaits
             </h1>
-            <p className="mt-4 text-primary-foreground/80 text-lg">
-              Browse verified hostels, compare prices, and contact landlords directly — all in one place.
+            <p className="mt-5 text-primary-foreground/80 text-lg md:text-xl leading-relaxed max-w-xl">
+              Discover verified, affordable hostels near FUTA. Compare prices, read reviews, and move in with confidence.
             </p>
           </div>
 
           {/* Search Bar */}
-          <div className="mt-8 bg-card rounded-xl p-4 md:p-6 shadow-xl max-w-3xl">
+          <div className="mt-10 bg-card rounded-2xl p-5 md:p-6 shadow-2xl max-w-3xl border">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               <Select onValueChange={setSearchLocation}>
-                <SelectTrigger>
+                <SelectTrigger className="h-12">
                   <MapPin className="h-4 w-4 mr-2 text-muted-foreground" />
                   <SelectValue placeholder="Location" />
                 </SelectTrigger>
@@ -57,7 +68,7 @@ const HomePage = () => {
                 </SelectContent>
               </Select>
               <Select onValueChange={setSearchRoomType}>
-                <SelectTrigger>
+                <SelectTrigger className="h-12">
                   <Home className="h-4 w-4 mr-2 text-muted-foreground" />
                   <SelectValue placeholder="Room Type" />
                 </SelectTrigger>
@@ -67,11 +78,25 @@ const HomePage = () => {
                   ))}
                 </SelectContent>
               </Select>
-              <Button onClick={handleSearch} className="gap-2" size="lg">
-                <Search className="h-4 w-4" />
+              <Button onClick={handleSearch} className="gap-2 h-12 text-base" size="lg">
+                <Search className="h-5 w-5" />
                 Search Now
               </Button>
             </div>
+          </div>
+
+          {/* Stats */}
+          <div className="mt-10 flex flex-wrap gap-8 md:gap-12">
+            {[
+              { value: "200+", label: "Verified Hostels" },
+              { value: "500+", label: "Happy Students" },
+              { value: "8", label: "Locations" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="text-2xl md:text-3xl font-bold text-accent">{stat.value}</p>
+                <p className="text-primary-foreground/70 text-sm">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -128,7 +153,7 @@ const HomePage = () => {
           {testimonials.map((t, i) => (
             <Card key={i} className="relative">
               <CardContent className="pt-6">
-                <Quote className="h-8 w-8 text-primary/20 mb-2" />
+                <Quote className="h-8 w-8 text-accent/30 mb-2" />
                 <p className="text-muted-foreground text-sm italic">"{t.quote}"</p>
                 <div className="flex items-center gap-3 mt-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold">

@@ -22,10 +22,10 @@ const HostelCard = ({ hostel }: { hostel: Hostel }) => (
         loading="lazy"
       />
       {hostel.featured && (
-        <Badge className="absolute top-3 left-3 bg-primary text-primary-foreground">Featured</Badge>
+        <Badge className="absolute top-3 left-3 bg-accent text-accent-foreground">Featured</Badge>
       )}
       <div className="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-card/90 backdrop-blur px-2 py-1 text-xs font-medium">
-        <Star className="h-3.5 w-3.5 fill-futa-gold text-futa-gold" />
+        <Star className="h-3.5 w-3.5 fill-cn-gold text-cn-gold" />
         {hostel.rating}
       </div>
     </div>

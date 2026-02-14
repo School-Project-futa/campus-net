@@ -57,14 +57,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        futa: {
-          green: "hsl(var(--futa-green))",
-          "green-light": "hsl(var(--futa-green-light))",
-          "green-dark": "hsl(var(--futa-green-dark))",
-          teal: "hsl(var(--futa-teal))",
-          gold: "hsl(var(--futa-gold))",
-          warning: "hsl(var(--futa-warning))",
-          success: "hsl(var(--futa-success))",
+        cn: {
+          blue: "hsl(var(--cn-blue))",
+          "blue-light": "hsl(var(--cn-blue-light))",
+          "blue-dark": "hsl(var(--cn-blue-dark))",
+          gold: "hsl(var(--cn-gold))",
+          "gold-light": "hsl(var(--cn-gold-light))",
+          warm: "hsl(var(--cn-warm))",
+          success: "hsl(var(--cn-success))",
+          warning: "hsl(var(--cn-warning))",
         },
       },
       borderRadius: {

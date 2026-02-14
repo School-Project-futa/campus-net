@@ -7,9 +7,9 @@ const Footer = () => (
         <div>
           <div className="flex items-center gap-2 mb-3">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-xs">
-              F
+              C
             </div>
-            <span className="font-bold text-foreground">FUTA<span className="text-primary">Hostels</span></span>
+            <span className="font-bold text-foreground">Campus<span className="text-accent">Nest</span></span>
           </div>
           <p className="text-sm text-muted-foreground">
             Helping FUTA students find safe, affordable off-campus accommodation since 2025.
@@ -41,7 +41,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="border-t mt-8 pt-6 text-center text-sm text-muted-foreground">
-        © 2025 FUTAHostels. Built for FUTA students. All rights reserved.
+        © 2025 CampusNest. Built for FUTA students. All rights reserved.
       </div>
     </div>
   </footer>
