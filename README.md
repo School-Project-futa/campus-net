@@ -42,7 +42,7 @@ A modern, student-friendly marketplace for finding verified off-campus hostels n
 
 ```bash
 # Clone the repository
-git clone <YOUR_GIT_URL>
+git clone https://github.com/School-Project-futa/dorm-den-dream.git
 
 # Navigate to the project
 cd campusnest
