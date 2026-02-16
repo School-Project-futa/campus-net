@@ -1,73 +1,73 @@
-# Welcome to your Lovable project
+# 🏠 CampusNest — Student Accommodation Near FUTA
 
-## Project info
+A modern, student-friendly marketplace for finding verified off-campus hostels near the Federal University of Technology, Akure (FUTA).
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+![CampusNest](https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&h=400&fit=crop)
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- **🔍 Smart Search** — Filter hostels by location, room type, price range, and amenities
+- **🏡 Detailed Listings** — Image galleries, amenity grids, reviews, and landlord contact info
+- **📝 Landlord Portal** — Submit new hostel listings with drag-and-drop image uploads
+- **📊 Admin Dashboard** — Manage listings, approve/reject submissions, and view analytics
+- **📱 Fully Responsive** — Optimized for desktop, tablet, and mobile devices
 
-**Use Lovable**
+## 📄 Pages
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+| Page | Description |
+|------|-------------|
+| **Home** | Hero section, featured listings, how-it-works, testimonials |
+| **Listings** | Filterable grid with sidebar filters and sorting |
+| **Hostel Details** | Full hostel info, image gallery, reviews, similar listings |
+| **Add Hostel** | Multi-field form for landlords to list properties |
+| **Search Results** | Filtered results with active filter tags and sorting |
+| **Admin Dashboard** | Stats widgets, pending approvals table, management tools |
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠 Tech Stack
 
-**Use your preferred IDE**
+- **React 18** + **TypeScript**
+- **Vite** — Fast build tooling
+- **Tailwind CSS** — Utility-first styling with custom design tokens
+- **shadcn/ui** — Accessible component library
+- **React Router** — Client-side routing
+- **Lucide Icons** — Clean icon set
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🎨 Design System
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Primary:** Deep Blue (`hsl(222, 60%, 28%)`)
+- **Accent:** Gold (`hsl(42, 90%, 52%)`)
+- **Style:** Rounded cards, soft shadows, marketplace-inspired layout
 
-Follow these steps:
+## 🚀 Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project
+cd campusnest
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the dev server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:8080`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📁 Project Structure
 
-**Use GitHub Codespaces**
+```
+src/
+├── components/       # Reusable UI components (Navbar, Footer, HostelCard)
+│   └── ui/           # shadcn/ui primitives
+├── data/             # Mock data and type definitions
+├── hooks/            # Custom React hooks
+├── lib/              # Utility functions
+└── pages/            # Route-level page components
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📝 License
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+MIT
